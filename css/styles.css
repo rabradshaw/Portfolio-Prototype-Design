@@ -1,0 +1,257 @@
+/*
+Name: Rodney Bradshaw
+Date: 10/23/2022
+*/
+/* CSS HEX  colors
+--black-chocolate: #201610ff;
+--liver-chestnut: #966B52ff;
+--black-coffee: #372E29ff;
+--lavender-web: #E0DCE7ff;
+--cool-grey: #8C91AEff;
+*/
+
+/* CSS reset */
+body, header, nav, main, footer, img, h1, h3, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+/* Style rule for box sizing applies to all elements */
+* {
+    box-sizing: border-box;
+ }
+/* Style rule for body and images */
+ body {
+    background: linear-gradient(#E0DCE7ff, #8C91AEff); 
+    
+}
+ img {
+    max-width: 100%;
+    display: block;
+ }
+ /*Profile image above navigation*/
+.profile{
+    float: left;
+    border-radius: 150px;
+    max-width: 100%; 
+    margin-left: 2%;
+}
+
+
+/*format the links*/
+a {
+    text-decoration: none;
+    color: rgb(44, 15, 4);
+}
+/*Header */
+h1 {
+    position: relative;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin-top: 2%;
+    margin-left: 8%;
+    color:#966B52ff;
+    text-shadow:0 2px 2px #201610ff;
+    
+}
+/*Navigation*/
+nav ul{
+    list-style-type: none;
+    text-align: center;
+}
+nav li a {
+    display: inline-block;
+    color: #372E29ff;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+nav li {
+    clear: both;
+    display: block;
+    font-size: 1.5em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 15px;
+    border: 1px solid #372E29ff;
+    margin: 1%;
+}
+nav a:hover {
+    color: #966B52ff;
+    background-color: #e5e0fa;
+    border-radius: 15px;
+} 
+/*footer*/
+footer {
+    border-top:solid #6f63a1 1px;
+    text-decoration: none; 
+    color: #372E29ff;
+    
+}
+footer div ul{
+    list-style-type: none;   
+}
+
+.footer-grid { 
+    text-align: center;
+}
+/* Images in grid area */
+.frame {
+    position: relative;
+    max-width:  450px;
+    margin: 2% auto;
+}
+
+.pic-text {
+    position: absolute; 
+    bottom: 0; 
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-shadow: 0 2px 2px #372E29ff;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+article p {
+    line-height: 1.5;
+    padding: 10px;
+}
+h2, h3{
+ padding-left: 10px;
+}
+/* Blocks tablet and desktop view items*/
+.tablet-desktop, .largescreen{
+    display: none;
+}
+/*Grid inside the footer Grid for socials*/
+.socials{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-left: 10%;
+    margin-right:10%;
+}
+
+
+
+/* Media Query for more Larger Tablet Viewport.*/
+@media screen and (min-width: 650px){
+    
+    /*show tablet desktop styles */
+    .tablet-desktop{
+        display: block;
+    }
+
+    nav li {
+        display: inline-block;
+    }
+    article p{
+        font-size: 1.25em;
+    }
+
+   /*hover animation for the figcaptions */ 
+    .pic-text {
+        font-size: 1em;
+        padding: 10px;
+     }
+     @-webkit-keyframes text-animation {
+        0% { font-size: 1em; } 
+        50% { font-size: 2em; }
+        100% { font-size: 1.35em; }
+       }
+       @keyframes  text-animation { 
+        0% { font-size: 1em; } 
+        50% { font-size: 2em; }
+        100% { font-size: 1.35em; }
+       }
+       .works-grid figure:hover {
+        -webkit-animation-name: text-animation; 
+        animation-name: text-animation;
+        -webkit-animation-duration: 5s; 
+        animation-duration: 5s;
+       }
+  /*Works Grid display */
+.works-grid{
+    display: grid; 
+    grid-template-columns: auto auto auto; 
+    grid-gap: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+} 
+/*footer Grid*/
+.footer-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: auto;
+}
+#footer-contact{
+    text-align: left;
+}
+#footer-info{
+    text-align: center;
+}
+#footer-services ul li{
+    text-align: justify;
+    margin-left: 2%;
+}
+main{
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+/* Aside animation area.*/
+.styles {
+	font-size: 35px;
+    margin-right: 4px;
+	font-family: Impact, Charcoal, sans-serif;
+	background-image: -webkit-repeating-linear-gradient(147deg, #e0dce7 10%, #8c91ae 30%);
+	-webkit-animation: animatedBackground 10s linear infinite normal;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: #966b52;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: #0000;
+}
+
+@-webkit-keyframes animatedBackground {
+	0% { background-position: 0 0 }
+	100% { background-position: 500px 0 }
+}
+
+aside img{   
+    border: solid black 1px;
+    border-radius: 10px;
+    animation: fadeout ease 5s infinite;
+     }
+@keyframes fadeout {
+    100% { opacity: 1; }
+  0% { opacity: 0; }
+
+}
+}
+/* Media Query for more Desktop Viewport.*/
+@media screen and (min-width: 850px){
+.largescreen{
+    display:block;
+}
+
+}
+
+/* Media Query for more Larger Desktop Viewport.*/
+@media screen and (min-width: 1921px) {
+
+        #container {
+            width: 1920px;
+            margin: 0 auto;
+        }
+}
+
+ /* Media Query for Print */
+ @media print {
+    body {
+        color: #000;
+        background-color: #fff;
+    }
+    img{
+        display: none;
+    }
+ }
